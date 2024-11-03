@@ -1,0 +1,88 @@
+* {
+    margin: 60;
+    padding: 40;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #f3f4f6;
+  }
+  
+  form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+  }
+  .form-inputs{
+    gap: 10px;
+    width: 100%;
+  }
+  
+  .drag-area {
+    border: 2px dashed #d3d3d3;
+    border-radius: 10px;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+  }
+  
+  .drag-area .icon {
+    font-size: 30px;
+    color: #5a5a5a;
+  }
+  
+  .drag-area header {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+  }
+  
+  .drag-area span {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  .drag-area button {
+    padding: 8px 20px;
+    font-size: 11px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    background: #339af0;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition:  0.3s;
+  }
+  
+  .drag-area button:hover {
+    background: #2378c3;
+  }
+
+
+.submit{
+    padding: 8px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    background: #339af0;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition:  0.3s;
+}
+  

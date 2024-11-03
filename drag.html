@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Your Profile | My Profile</title>
+    <link rel="stylesheet" href="drag.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+
+    <h2>Formulir Pengiriman Data</h2>
+    <form action="/submit" method="post" enctype="multipart/form-data" onsubmit="goToNextPage(event)">
+        <!-- Input Nama -->
+        <label for="nama">Nama:</label><br>
+        <input type="text" id="nama" name="nama" required><br><br>
+
+        <!-- Input Email -->
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <!-- Input No Telepon -->
+        <label for="no_telp">No. Telepon:</label><br>
+        <input type="tel" id="no_telp" name="no_telp" required><br><br>
+
+        <!-- Pemilihan Tanggal -->
+        <label for="tanggal">Tanggal:</label><br>
+        <input type="date" id="tanggal" name="tanggal" required><br><br>
+
+        <!-- Area Drag and Drop untuk File PDF -->
+        <label for="dokumen">Unggah Dokumen (PDF):</label><br>
+        <div class="drag-area">
+            <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+            <header>Drop Your PDF</header>
+            <span>atau</span>
+            <button type="button">Pilih File</button>
+            <input type="file" id="dokumen" name="dokumen" accept=".pdf" hidden required>
+        </div><br><br>
+
+        <!-- Tombol Submit -->
+        <button class ="submit">submit</button>
+
+    </form>
+
+    <script src="drag.js"></script>
+    <script>
+    //Clear form before unload
+    window.onbeforeunload= () => {
+        for (const form of document.getElementsByTagName("form")) {
+            form.reset();
+        }
+    };
+    
+</script>
+</body>
+</html>
